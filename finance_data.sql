@@ -21,7 +21,6 @@ CREATE TABLE Users (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Создание таблицы "Все транзакции"
 CREATE TABLE AllTransactions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id VARCHAR(100) NOT NULL,
@@ -34,7 +33,6 @@ CREATE TABLE AllTransactions (
   FOREIGN KEY (user_id) REFERENCES Users(id)
 );
 
--- Создание таблицы "Входящие транзакции"
 CREATE TABLE IncomingTransactions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id VARCHAR(100) NOT NULL,
@@ -48,7 +46,6 @@ CREATE TABLE IncomingTransactions (
   FOREIGN KEY (user_id) REFERENCES Users(id)
 );
 
--- Создание таблицы "Исходящие транзакции"
 CREATE TABLE OutgoingTransactions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id VARCHAR(100) NOT NULL,
